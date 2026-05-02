@@ -35,7 +35,7 @@ public class DramaService {
         List<TvShow> dramaShows = getDramaShows();
         List<TvShow> result = new ArrayList<>();
         int i = 0;
-        while (result.size() <= 20) {
+        while (result.size() < 20) {
             if (dramaShows.get(i).language().equals("English")) {
                 result.add(dramaShows.get(i));
             }

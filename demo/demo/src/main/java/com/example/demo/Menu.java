@@ -52,11 +52,11 @@ public class Menu implements CommandLineRunner {
                             System.out.println("- " + s.name() + " | Estreno: " + s.premiered()));
                         break;
                     case 2:
-                        System.out.println("\nCargando series de comedia...");
+                        System.out.println("\nCargando series de acción...");
                         actionService.get20EnglishActionShows().forEach(s -> 
                             System.out.println("- " + s.name() + " (" + s.language() + ")"));
 
-                        System.out.println("\n Cargando Top 5 de Comedia...");
+                        System.out.println("\n Cargando Top 5 de acción...");
                         actionService.getTop5BestEvaluatedActionShows().forEach(s -> 
                             System.out.println("- " + s.name() + " | Rating: " + s.rating().average()));
 
@@ -65,11 +65,11 @@ public class Menu implements CommandLineRunner {
                             System.out.println("- " + s.name() + " | Estreno: " + s.premiered()));
                         break;
                     case 3:
-                        System.out.println("\nCargando series de comedia...");
+                        System.out.println("\nCargando series de drama...");
                         dramaService.get20EnglishDramaShows().forEach(s -> 
                             System.out.println("- " + s.name() + " (" + s.language() + ")"));
 
-                        System.out.println("\n Cargando Top 5 de Comedia...");
+                        System.out.println("\n Cargando Top 5 de drama...");
                         dramaService.getTop5BestEvaluatedDramaShows().forEach(s -> 
                             System.out.println("- " + s.name() + " | Rating: " + s.rating().average()));
 
