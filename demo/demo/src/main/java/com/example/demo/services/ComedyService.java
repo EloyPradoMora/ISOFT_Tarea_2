@@ -36,7 +36,7 @@ public class ComedyService {
         return getTvShows(page).stream()
                 .filter(s -> Arrays.asList(s.genres()).contains(genreString))
                 .filter(s -> s.rating() != null && s.rating().average() != null)
-                .sorted()
+                .sorted((s1, s2) -> Double.compare(s1.rating().average(), s2.rating().average()))
                 .limit(5)
                 .toList();
     }
